@@ -1,41 +1,29 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, Target, Zap, Bot, ShieldCheck, Eye } from "lucide-react";
+import { Eye, Shield, Zap, AlertTriangle } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-20 px-4 ai-gradient-bg">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium mb-4">
-          <SparkleIcon className="w-4 h-4" />
-          <span>Next-Gen ATS Optimization Engine</span>
+          <Eye className="w-4 h-4" />
+          <span>AI-Powered Drowsiness Detection</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-          Beat the <span className="ai-gradient-text">Bots</span>.<br/> Land the <span className="ai-gradient-text">Interview</span>.
+          Stay <span className="ai-gradient-text">Awake</span>.<br/> Stay <span className="ai-gradient-text">Safe</span>.
         </h1>
         
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Our AI-powered platform analyzes your resume against job descriptions, identifying missing skills and generating high-impact, ATS-optimized bullet points.
+          Advanced AI-powered eye tracking system that detects drowsiness in real-time and alerts you before it's too late. Perfect for drivers, students, and professionals.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-          <Link href="/builder">
-            <Button size="lg" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto shadow-[0_0_40px_rgba(139,92,246,0.3)]">
-              Build Optimized Resume
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
-          <Link href="/screener">
-            <Button size="lg" variant="secondary" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto border border-white/5">
-              Screen Existing Resume
-              <Target className="w-5 h-5" />
-            </Button>
-          </Link>
           <Link href="/drowsiness">
-            <Button size="lg" variant="outline" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto border border-white/5">
+            <Button size="lg" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto shadow-[0_0_40px_rgba(139,92,246,0.3)]">
               <Eye className="w-5 h-5" />
-              Drowsiness Detector
+              Start Detection
             </Button>
           </Link>
         </div>
@@ -43,19 +31,19 @@ export default function Home() {
 
       <div className="grid md:grid-cols-3 gap-6 mt-32 max-w-5xl mx-auto px-4 w-full">
         <FeatureCard 
-          icon={<Bot className="w-8 h-8 text-primary" />}
-          title="Smart Skill Matching"
-          description="NLP algorithms extract key skills from job descriptions and compare them against your profile."
+          icon={<Eye className="w-8 h-8 text-primary" />}
+          title="Real-Time Eye Tracking"
+          description="Advanced AI detects when your eyes are closed using 478 facial landmarks and MediaPipe technology."
         />
         <FeatureCard 
-          icon={<Zap className="w-8 h-8 text-accent" />}
-          title="AI Bullet Generator"
-          description="Transform weak experience points into powerful, action-driven statements that get noticed."
+          icon={<AlertTriangle className="w-8 h-8 text-yellow-400" />}
+          title="5-Second Alert System"
+          description="Loud alarm triggers after 5 seconds of closed eyes to wake you up before danger strikes."
         />
         <FeatureCard 
-          icon={<ShieldCheck className="w-8 h-8 text-green-400" />}
-          title="ATS Score Prediction"
-          description="Get an accurate prediction of how your resume will perform in major Applicant Tracking Systems."
+          icon={<Shield className="w-8 h-8 text-green-400" />}
+          title="Privacy-First Design"
+          description="All processing happens in your browser. Your video never leaves your device."
         />
       </div>
     </div>
