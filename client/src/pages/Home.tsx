@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, Target, Zap, Bot, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileText, Target, Zap, Bot, ShieldCheck, Eye } from "lucide-react";
 
 export default function Home() {
   return (
@@ -30,6 +30,12 @@ export default function Home() {
             <Button size="lg" variant="secondary" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto border border-white/5">
               Screen Existing Resume
               <Target className="w-5 h-5" />
+            </Button>
+          </Link>
+          <Link href="/drowsiness">
+            <Button size="lg" variant="outline" className="gap-2 h-14 px-8 text-lg w-full sm:w-auto border border-white/5">
+              <Eye className="w-5 h-5" />
+              Drowsiness Detector
             </Button>
           </Link>
         </div>
