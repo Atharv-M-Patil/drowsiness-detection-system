@@ -125,7 +125,7 @@ export default function LoginPage() {
           <CardHeader>
             <CardTitle className="text-2xl font-mono">Sign In</CardTitle>
             <CardDescription>
-              Continue with Google or email/password to save and manage your ResumeHub AI sessions.
+              Continue with Google or email/password to save and manage your Drowsiness Detection System sessions.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -140,8 +140,8 @@ export default function LoginPage() {
                 <p className="text-sm text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md px-3 py-2">
                   Signed in as {user?.displayName || user?.email || "your account"}.
                 </p>
-                <Button className="w-full" onClick={() => setLocation("/builder")}>
-                  Go to Resume Builder
+                <Button className="w-full" onClick={() => setLocation("/drowsiness")}>
+                  Go to Drowsiness Detector
                 </Button>
                 <Button variant="outline" className="w-full" onClick={handleLogout}>
                   Logout
